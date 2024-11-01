@@ -1,0 +1,16 @@
+.header h1 {
+    display: inline-block;
+    height: 42px;
+    width: 500px;
+    background-color: red;
+}
+
+.header ul {
+    display: inline;
+}
+
+.header li {
+    display: inline-block;
+    background-color: red;
+    list-style: none;
+}
