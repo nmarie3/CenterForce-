@@ -1,0 +1,29 @@
+.sliderImage {
+    
+}
+
+
+.arrows {
+    all: unset;
+    color: white;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    bottom: 0;
+    display: block;
+}
+
+.dots {
+
+
+}
+
+.dot {
+
+}
+
+.activeDot {
+
+}
+
