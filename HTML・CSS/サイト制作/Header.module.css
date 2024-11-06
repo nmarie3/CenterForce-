@@ -1,9 +1,0 @@
-section {
-    display: flex;
-    justify-content: flex-end;
-}
-
-img {
-    max-width: 170px;
-    margin-right: 45px;
-}
