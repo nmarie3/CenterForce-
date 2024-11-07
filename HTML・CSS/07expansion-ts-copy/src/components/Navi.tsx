@@ -1,15 +1,18 @@
 import styles from "../styles/Navi.module.css"
 
-function Navi() {
+export function Navi() {
 
 
 
     return (
-        <>
-        </>
+        <div className={styles.naviContainer}>
+            
+
+
+        </div>
+
 
 
       );
   }
   
-  export default Navi;

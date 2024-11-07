@@ -96,11 +96,12 @@
     text-decoration: none;
     border-bottom: #E91926;
     font-size: 7px;
+
+    &:hover {
+        color:#E91926;
+    }
 }
 
-.links a:hover {
-    color:#E91926;
-}
 
 .links a:after {
     content: "";
