@@ -1,6 +1,7 @@
 import {Header} from "./components/Header";
 import "./App.css";
 import {Info} from "./components/Info";
+import {Navi} from "./components/Navi";
 //import {Slider} from "./components/Slider";
 import Slider1 from "./assests/event1.png";
 import Slider2 from "./assests/event2.png";
@@ -16,6 +17,7 @@ export default function App() {
     <>
     <div className="wrapper">
     <Header/>
+    <Navi/>
     {/* <Slider images={IMAGES}/> */}
     <Info/>
     </div>

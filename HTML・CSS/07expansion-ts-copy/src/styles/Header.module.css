@@ -1,9 +1,10 @@
 section {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 30px;
 }
 
 img {
-    max-width: 170px;
+    max-width: 190px;
     margin-right: 45px;
 }

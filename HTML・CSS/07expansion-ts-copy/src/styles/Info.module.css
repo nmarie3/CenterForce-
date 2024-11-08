@@ -1,8 +1,8 @@
 .infoWrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 120px;
+    margin-right: 50px;
 
 }
 
@@ -11,7 +11,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 8px;
-    font-size: 1.6vw;
+    font-size: 7px;
     background-color: #FFF8E0;
     border: 4px #FFCC34;
     border-style: ridge;
@@ -46,13 +46,14 @@
     text-shadow: 0 0 7px #f0dc41,
     0 0 10px #f0dc41,
     0 0 21px #f0dc41;
-    font-size: 2.5vw;
+    font-size: 13px;
     font-weight: bold;
     height: 6vw;
 }
 
 .tab {
-    flex: 1;text-align: center;
+    flex: 1;
+    text-align: center;
     background-color: #3E0002;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
