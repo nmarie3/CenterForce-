@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./assests/haike5.gif");
+  background-color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center 50%;
+  background-attachment: fixed;
 }
 
 code {

@@ -1,29 +1,75 @@
-.sliderImage {
-    
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.sliderContainer {
+    padding-top: 35px;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.imgContainer {
+    display: flex;
+    justify-self: center;
+    margin-left: 30px;
+    transition: transform 0.5s ease;
 }
 
 
-.arrows {
+button {
+    display: flex;
     all: unset;
+    position: absolute;
     color: white;
     cursor: pointer;
-    width: 2rem;
-    height: 2rem;
+    font-size: 1.5rem;
     top: 0;
     bottom: 0;
     display: block;
+    padding-top: 20px;
+    z-index: 99;
 }
 
-.dots {
-
-
+.sliderImg {
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.dot {
-
+.prevImg, .nextImg {
+    opacity: 60%;
+    transform: scale(1.5);
 }
+
+
+.mainImg {
+    z-index: 99;
+    transform: scale(1.8);
+    margin-left: 135px;
+    margin-right: 180px;
+}
+
+
+.dotContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.dotIndex {
+    /* display: inline-block; */
+    background-color: darkgray;
+    border-radius: 5px;
+    width: 10px;
+    height: 6px;
+    border: 1px;
+    border-style: groove;
+    margin:2px;
+    cursor: pointer;
+}
+
 
 .activeDot {
-
+    background-color: #E91926;
 }
 
