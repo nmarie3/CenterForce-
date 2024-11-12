@@ -57,7 +57,6 @@ button {
 }
 
 .dotIndex {
-    /* display: inline-block; */
     background-color: darkgray;
     border-radius: 5px;
     width: 10px;

@@ -9,7 +9,7 @@ const man = {
   const human = {
     anime: {
       man: {
-        onepiece: 'ゾロ',
+        onepiece: 'ルフィー',
         Naruto: 'サスケ',
       },
       girl: {
