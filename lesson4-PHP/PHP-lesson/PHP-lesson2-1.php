@@ -60,7 +60,33 @@
 
     //この下に記述してください
 
-    
+    function leapYear($year) {
+        if ($year % 400 == 0) {
+            return true;
+        } elseif ($year % 100 == 0) {
+            return false;
+        } elseif ($year % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    $currentYear = date("year");
+
+    for ($year = 1900; $year <= $currentYear; $year++) {
+        if (isLeapYear($year)) {
+            echo "{$year}年はうるう年です。";
+            echo "<br>";
+        } else {
+            echo "{$year}年はうるう年ではありません。";
+            echo "<br>";
+        }
+    }
+
+
+
 ?>
 <div>
 </body>

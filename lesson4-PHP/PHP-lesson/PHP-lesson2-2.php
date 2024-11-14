@@ -36,7 +36,27 @@
 
     //この下に記述してください
 
+    $cashType = [
+        "五千円札" => 5000,
+        "千円札" => 1000,
+        "500円玉" => 500,
+        "100円玉" => 100,
+        "50円玉" => 50,
+        "10円玉" => 10,
+        "5円玉" => 5,
+        "1円玉" => 1
+    ];
+
+    function changeCalculator($itemPrice) {
+        
+        $totalCash = 20000;
+        $change = $totalCash - $itemPrice;
     
+        foreach ($cashType as $cash => $value) {
+            
+        }
+
+    };
 ?>
 <div>
 </body>
