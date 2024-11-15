@@ -53,9 +53,13 @@
         $change = $totalCash - $itemPrice;
     
         foreach ($cashType as $cash => $value) {
-            
+            $count = floor($change / $value);
+        if ($count > 0) {
+            echo "{$cash} {$count}枚";
+            echo "<br>";
+            $change %= $value;
+            }
         }
-
     };
 ?>
 <div>

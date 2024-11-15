@@ -40,20 +40,32 @@
      自分：20点　対戦相手：20点　勝敗：引き分けです。
     */
 
-    function blackJack()
-    {
-      // トランプカードを格納した配列、マークの考慮はなし
-      $cards = ["A", "J", "Q", "K", 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      // 自分のカード
-      $player = [];
-      // 相手のカード
-      $opponent = [];
-    }
+    // function blackJack()
+    // {
+    //   // トランプカードを格納した配列、マークの考慮はなし
+    //   $cards = ["A", "J", "Q", "K", 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    //   // 自分のカード
+    //   $player = [];
+    //   // 相手のカード
+    //   $opponent = [];
+    // }
     
 
     //この下に記述してください
 
-    
+    function blackJack() {
+
+        $cards = ["A", "J", "Q", "K", 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        $player = [getRandomCard($cards), getRandomCard($cards)];
+        $opponent = [getRandomCard($cards), getRandomCard($cards)];
+
+    function getRandomCard($cards) {
+        return $cards;
+        }
+
+    }
+
     ?>
 <div>
 </body>
