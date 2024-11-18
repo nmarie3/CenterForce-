@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import styles from "../styles/Info.module.css";
 import renaTwitter from "../assests/twitter.png"
 import old07 from "../assests/bg_moon.png"
