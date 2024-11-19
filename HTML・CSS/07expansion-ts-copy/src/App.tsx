@@ -1,8 +1,7 @@
 import {Header} from "./components/Header";
 import "./App.css";
 import {Info} from "./components/Info";
-//import {Navi} from "./components/Navi";
-import {BurgerX} from "./components/BurgerX";
+import {Navi} from "./components/Navi";
 import {Slider} from "./components/Slider";
 import Slider1 from "./assests/gerokasu2.png";
 import Slider2 from "./assests/event1.png";
@@ -17,10 +16,10 @@ const IMAGES = [Slider1, Slider2, Slider3, Slider4]
 export default function App() {
   return (
     <>
-    <BurgerX/>
     <Header/>
-    <div className="wrapper">
+    <Navi/>
     <Slider images={IMAGES}/>
+    <div className="wrapper">
     <Info/>
     </div>
     </>

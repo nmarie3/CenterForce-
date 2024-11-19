@@ -1,8 +1,8 @@
 .naviContainer {
-    position: fixed;
     left: 0;
     top: 90px;
 }
+
 
 .beako {
     width: 80px;
@@ -11,18 +11,23 @@
     bottom: 5px;
 }
 
+/* ------------PC--------------- */
 
-.naviStyle {
+.naviMainPC {
+    position: fixed;
+    top: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     color: white;
     font-size: 7px;
-    padding: 3px;
+    margin-left: -30px;
+    width: 100%;
 }
 
-.titleStyle {
+.titleStylePC {
     width: 49px;
-    margin-top: 10px;
+    margin-top: -2px;
     border: solid 0.7px white;
     padding: 3px;
     cursor: pointer;
@@ -40,24 +45,132 @@
 }
 
 
-.dropdownStyle {
+.dropdownStylePC {
     display: flex;
     flex-direction: column;
     width: 100px;
 }
 
-.dropdownStyle a {
+.dropdownStylePC a {
     all: unset;
     cursor: pointer;
     font-size: 7px;
     transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 }
 
-.dropdownStyle a:before {
+.dropdownStylePC a:before {
     content: "";
     display: block;
     position: relative;
     border-top: solid 0.7px white;
     width: 59px;
     padding-bottom: 3px;
+}
+
+/* ------------MOBILE--------------- */
+
+.burgerImg {
+    position: absolute;
+    margin-top: 10px;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid darkgrey;
+    border-style: outset none none outset;
+}
+
+.naviMainMobile {
+    color: white;
+    font-size: 7px;
+    padding: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mapAfterLine {
+    border-bottom: solid 1px white;
+}
+
+.titleStyleMobile {
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bolder;
+    }
+
+
+.arrowIcon {
+    color: white;
+    transform: rotate(45deg);
+    padding-right: 3px;
+    width: 15px;
+}
+
+.beakoRoom {
+    text-decoration: none;
+    font-size: 8;
+    color: white;
+    border-bottom: solid 1px white;
+    padding-bottom: 10px;
+}
+
+.beakoRoom a {
+    text-decoration: none;
+    font-size: 8;
+    color: white;
+}
+
+.dropdownStyleMobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dropdownStyleMobile a {
+    all: unset;
+    cursor: pointer;
+    font-size: 7px;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.dropdownStyleMobile a:before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 3px;
+}
+
+/* ------RESPONSIVE------------- */
+
+.naviContainer .naviMainMobile {
+    display:none;
+    
+}
+
+
+
+@media (max-width: 500px) {
+    .naviContainer .naviMainPC{
+        display:none;
+    }
+     
+    .naviContainer .naviMainMobile {
+        position: fixed;
+        width: 95%;
+        height: 100%;
+        left: 0;
+        display: block;
+        z-index: 1000;
+
+    }
+    .naviContainer .naviMainMobile .burgerImg {
+        position: absolute;
+        top: -80px;
+        margin-left: 5px;
+        padding: 2px;
+        left: 0;
+        cursor: pointer;
+        border: 1px solid darkgrey;
+        border-style: outset none none outset;
+    }
 }
