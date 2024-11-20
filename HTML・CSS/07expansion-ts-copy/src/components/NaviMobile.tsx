@@ -18,7 +18,11 @@ type NaviMobileProps = {
 
 export function NaviMobile({ items }: NaviMobileProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropOpen, setDropOpen] = useState(false);
+  const [dropOpen, setDropOpen] = useState <number | null> (null);
+
+  const toggleDrop = (index: number) => {
+    setDropOpen(dropOpen === index ? null : index);
+  };
 
   const burgerIcon = (
     <TbMenu2
@@ -42,39 +46,45 @@ export function NaviMobile({ items }: NaviMobileProps) {
   );
 
 
-  const plusIcon = (
-    <FaPlus
-      className={styles.plusIcon}
-      size="9px"
-      color="#E91926"
-      style={{position: "absolute", right: "0"}}
-      onClick={() => setDropOpen(!dropOpen)}
-    />
-  );
+  // const plusIcon = (
+  //   <FaPlus
+  //     className={styles.plusIcon}
+  //     size="9px"
+  //     color="#E91926"
+  //     style={{position: "absolute", right: "0"}}
+  //     onClick={() => setDropOpen(!dropOpen)}
+  //   />
+  // );
 
-  const minusIcon = (
-    <FaMinus
-      className={styles.minusIcon}
-      size="9px"
-      color="#E91926"
-      style={{position: "absolute", right: "0" }}
-      onClick={() => setDropOpen(!dropOpen)}
-    />
+  // const minusIcon = (
+  //   <FaMinus
+  //     className={styles.minusIcon}
+  //     size="9px"
+  //     color="#E91926"
+  //     style={{position: "absolute", right: "0"}}
+  //     onClick={() => setDropOpen(!dropOpen)}
+  //   />
 
-  );
+  // );
 
   return (
-    <nav className={styles.naviMainMobile}>
-      {isOpen ? closeIcon : burgerIcon}
+    <>
+    {isOpen ? closeIcon : burgerIcon}
+    <nav className={styles.naviMainMobile}
+    style={isOpen ? {backgroundColor: "rgba(0, 0, 0, 0.9)", paddingTop: "100px", paddingBottom: "100vh", top:"-20px"} : {}}>
+      {/* <button className="styles.burger">
+        <div className="burgerBar"></div>
+      </button> */}
       {isOpen && (
-        <div style={{ backgroundColor: "rgba(0, 0, 0, 0.9)"}}>
+        <div>
           {items.map((item, index) => (
             <div key={index} className={styles.mapAfterLine}>
-              <ul className={styles.titleStyleMobile}>
+              <ul className={styles.titleStyleMobile}
+              onClick={() => toggleDrop(index)}>
                 {item.title}
-                {item.link && (dropOpen ? minusIcon : plusIcon)}
+                {item.link && (dropOpen === index ? <FaMinus className={styles.minusIcon} /> : <FaPlus className={styles.plusIcon} />)}
               </ul>
-              {item.link && (
+              {item.link && dropOpen === index && (
                 <ul className={styles.dropdownStyleMobile}>
                   {item.link.map((link, index) => (
                     <a
@@ -94,5 +104,6 @@ export function NaviMobile({ items }: NaviMobileProps) {
         </div>
       )}
     </nav>
+    </>
   );
 }

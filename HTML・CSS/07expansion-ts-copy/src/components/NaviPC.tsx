@@ -25,7 +25,7 @@ export function NaviPC({ items }: NaviPCProps) {
             <ul
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave}>
+                onMouseLeave={handleMouseLeave}>
                     <div className={styles.titleStylePC}>
                         {item.title}
                     </div>
