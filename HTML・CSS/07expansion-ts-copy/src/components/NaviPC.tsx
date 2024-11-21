@@ -5,6 +5,13 @@ type NaviItem = {
   title: string;
   link?: { label: string; url: string }[];
 };
+/////look over this again as a solution
+// type NaviItem = {
+//   items: {
+//   title: string;
+//   link?: { label: string; url: string }
+//   }[];
+// };
 
 type NaviPCProps = {
   items: NaviItem[];

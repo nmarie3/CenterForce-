@@ -15,8 +15,8 @@
 .imgContainer {
     display: flex;
     justify-self: center;
-    margin-left: 30px;
     transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
 
@@ -40,15 +40,17 @@ button {
 
 .prevImg, .nextImg {
     opacity: 60%;
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
+    object-fit: cover;
 }
 
 
 .mainImg {
     z-index: 99;
-    transform: scale(1.8);
-    margin-left: 135px;
-    margin-right: 180px;
+    /* transform: scale(1.8); */
+    /* margin-left: 135px;
+    margin-right: 180px; */
+    object-fit: cover;
 }
 
 
