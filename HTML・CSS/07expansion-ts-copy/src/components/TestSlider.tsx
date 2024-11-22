@@ -1,22 +1,12 @@
-import React, { useState, useRef } from "react";
-import styles from "../styles/SliderV2.module.css"
-//import { IoIosArrowBack } from "react-icons/io";
-//import { IoIosArrowForward } from "react-icons/io";
+import React, {useRef, useState} from "react";
 import Slider1 from "../assests/gerokasu2.png";
 import Slider2 from "../assests/event1.png";
 import Slider3 from "../assests/event2.png";
 import Slider4 from "../assests/event3.png";
-
-// type SliderProps = {
-//     images: {
-//     image: string;
-//     url: string;
-//     }[]
-// }
-//export function SliderV2({images}: SliderProps) {
+import styles from "../styles/TestSlider.module.css"
 
 
-export function SliderV2() {
+export function TestSlider() {
     const itemsRef = useRef<HTMLDivElement | null>(null);
     const [isMouseDown, setIsMouseDown] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -54,28 +44,26 @@ export function SliderV2() {
       }
 
 
-    return (
-        // <div className={styles.sliderContainer}>
-            <div className={styles.imgContainer}
-            ref={itemsRef}
+
+
+
+      return (
+        <div className={styles.sliderContainer}>
+            <div className={styles.banners} ref={itemsRef}
             onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}>
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}>
                 {images.map((image, index) => (
-                    <div
-                        key={index}
-                        className={styles.bannerImg}
-                    >
-                            <a href={image.url}>
-                            <img 
-                            src={image.image}/>
-                            </a>
+                    <div key={index} className={styles.bannerImg}>
+                        <img src={image.image}/>
                     </div>
                 ))}
+
+
             </div>
+        </div>
+      )
 
-        // </div>
-    )
 
-};
+}

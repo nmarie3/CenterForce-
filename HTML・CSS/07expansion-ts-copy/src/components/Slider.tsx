@@ -5,7 +5,10 @@ import { IoIosArrowForward } from "react-icons/io";
 
 
 type SliderProps = {
-    images: string[];
+    images: {
+    image: string;
+    url: string;
+    }[]
 }
 
 export function Slider({images}: SliderProps) {
@@ -25,25 +28,25 @@ export function Slider({images}: SliderProps) {
     };    
 
 
-    // const [isDragged, setIsDragged] = useState(false)
-    // const dragRef = useRef<HTMLInputElement | null>(null);
+    const [isDragged, setIsDragged] = useState(false)
+    const dragRef = useRef<HTMLDivElement | null>(null);
 
 
-    // const handleMouseDown = (e: React.MouseEvent) => {
-    //     setIsDragged(true);
-    // };
+    const handleMouseDown = (e: React.MouseEvent) => {
+        setIsDragged(true);
+    };
 
-    // const handleMoveEvent = (e: React.MouseEvent) => {
-    //     if (!isDragged || !dragRef.current) return;
-    //     const slider = dragRef.current;
-    //     const distance = e.movementX;
-    //     slider.scrollLeft -= distance;
-    //     }
+    const handleMoveEvent = (e: React.MouseEvent) => {
+        if (!isDragged || !dragRef.current) return;
+        const slider = dragRef.current;
+        const distance = e.movementX;
+        slider.scrollLeft -= distance;
+        }
 
 
-    // const handleMouseUp = () => {
-    //     setIsDragged(false);
-    // };
+    const handleMouseUp = () => {
+        setIsDragged(false);
+    };
 
 
     // useEffect(() => {
@@ -62,9 +65,9 @@ export function Slider({images}: SliderProps) {
                 // onMouseUp={handleMouseUp}
                 // onMouseLeave={handleMouseUp}
                 >
-                <img src={images[prevIndex]} className={`${styles.sliderImg} ${styles.prevImg}`}/>
+                {/* <img src={images[prevIndex]} className={`${styles.sliderImg} ${styles.prevImg}`}/>
                 <img src={images[currentIndex]} className={`${styles.sliderImg} ${styles.mainImg}`}/>
-                <img src={images[nextIndex]} className={`${styles.sliderImg} ${styles.nextImg}`}/>
+                <img src={images[nextIndex]} className={`${styles.sliderImg} ${styles.nextImg}`}/> */}
             </div>
             <button onClick={goPrevImg} style={{left: 0}}><IoIosArrowBack /></button>
             <button onClick={goNextImg} style={{right: 0}}><IoIosArrowForward /></button>
