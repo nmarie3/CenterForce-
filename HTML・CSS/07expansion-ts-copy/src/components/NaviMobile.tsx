@@ -9,6 +9,7 @@ import { FaLocationArrow } from "react-icons/fa";
 
 type NaviItem = {
   title: string;
+  url?: string;
   link?: { label: string; url: string }[];
 };
 
@@ -45,43 +46,18 @@ export function NaviMobile({ items }: NaviMobileProps) {
 
   );
 
-
-  // const plusIcon = (
-  //   <FaPlus
-  //     className={styles.plusIcon}
-  //     size="9px"
-  //     color="#E91926"
-  //     style={{position: "absolute", right: "0"}}
-  //     onClick={() => setDropOpen(!dropOpen)}
-  //   />
-  // );
-
-  // const minusIcon = (
-  //   <FaMinus
-  //     className={styles.minusIcon}
-  //     size="9px"
-  //     color="#E91926"
-  //     style={{position: "absolute", right: "0"}}
-  //     onClick={() => setDropOpen(!dropOpen)}
-  //   />
-
-  // );
-
   return (
     <>
     {isOpen ? closeIcon : burgerIcon}
     <nav className={styles.naviMainMobile}
     style={isOpen ? {backgroundColor: "rgba(0, 0, 0, 0.9)", paddingTop: "100px", paddingBottom: "100vh", top:"-20px"} : {}}>
-      {/* <button className="styles.burger">
-        <div className="burgerBar"></div>
-      </button> */}
       {isOpen && (
         <div>
           {items.map((item, index) => (
             <div key={index} className={styles.mapAfterLine}>
               <ul className={styles.titleStyleMobile}
               onClick={() => toggleDrop(index)}>
-                {item.title}
+                <a href={item.url}>{item.title}</a>
                 {item.link && (dropOpen === index ? <FaMinus className={styles.minusIcon} /> : <FaPlus className={styles.plusIcon} />)}
               </ul>
               {item.link && dropOpen === index && (

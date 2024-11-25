@@ -3,15 +3,9 @@ import styles from "../styles/Navi.module.css";
 
 type NaviItem = {
   title: string;
+  url?: string;
   link?: { label: string; url: string }[];
 };
-/////look over this again as a solution
-// type NaviItem = {
-//   items: {
-//   title: string;
-//   link?: { label: string; url: string }
-//   }[];
-// };
 
 type NaviPCProps = {
   items: NaviItem[];
@@ -34,7 +28,7 @@ export function NaviPC({ items }: NaviPCProps) {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}>
                     <div className={styles.titleStylePC}>
-                        {item.title}
+                      <a href={item.url}>{item.title}</a>
                     </div>
                         {hoveredIndex === index && (
                     <div className={styles.dropdownStylePC}>

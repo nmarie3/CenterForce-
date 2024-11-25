@@ -45,7 +45,7 @@
     text-shadow: 0 0 7px #f0dc41,
     0 0 10px #f0dc41,
     0 0 21px #f0dc41;
-    font-size: 13px;
+    font-size: 0.7rem;
     font-weight: bold;
     height: 6vw;
     cursor: pointer;
@@ -121,4 +121,14 @@
     color: white;
     font-size: 7px;
     text-align: center;
+}
+
+
+
+
+@media (max-width: 700px) {
+    .tabs {
+        font-size: 0.6rem;
+        padding-bottom: 8px;
+    }
 }

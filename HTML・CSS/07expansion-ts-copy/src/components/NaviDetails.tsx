@@ -21,6 +21,7 @@ export const items = [
   },
   {
     title: "その他お仕事",
+    url: "https://07th-expansion.net/osigoto.html",
   },
   {
     title: "Download 🢓",
@@ -31,8 +32,10 @@ export const items = [
   },
   {
     title: "お取扱店舗",
+    url: "https://07th-expansion.net/shop.html",
   },
   {
     title: "お問い合わせ",
+    url: "https://07th-expansion.net/07mailform",
   },
 ];

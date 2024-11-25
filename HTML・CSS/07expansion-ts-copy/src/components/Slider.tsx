@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect} from "react";
 import styles from "../styles/Slider.module.css"
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -28,49 +28,23 @@ export function Slider({images}: SliderProps) {
     };    
 
 
-    const [isDragged, setIsDragged] = useState(false)
-    const dragRef = useRef<HTMLDivElement | null>(null);
 
+    useEffect(() => {
+        const timer = setInterval(goNextImg, 2000);
 
-    const handleMouseDown = (e: React.MouseEvent) => {
-        setIsDragged(true);
-    };
-
-    const handleMoveEvent = (e: React.MouseEvent) => {
-        if (!isDragged || !dragRef.current) return;
-        const slider = dragRef.current;
-        const distance = e.movementX;
-        slider.scrollLeft -= distance;
-        }
-
-
-    const handleMouseUp = () => {
-        setIsDragged(false);
-    };
-
-
-    // useEffect(() => {
-    //     const timer = setInterval(goNextImg, 3000);
-
-    //     return () => clearInterval(timer);
-    // }, [images]);
+        return () => clearInterval(timer);
+    }, [currentIndex, images.length]);
 
 
     return (
         <div className={styles.sliderContainer}>
-            <div className={styles.imgContainer}
-                // ref={dragRef}
-                // onMouseDown={handleMouseDown}
-                // onMouseMove={handleMoveEvent}
-                // onMouseUp={handleMouseUp}
-                // onMouseLeave={handleMouseUp}
-                >
-                {/* <img src={images[prevIndex]} className={`${styles.sliderImg} ${styles.prevImg}`}/>
-                <img src={images[currentIndex]} className={`${styles.sliderImg} ${styles.mainImg}`}/>
-                <img src={images[nextIndex]} className={`${styles.sliderImg} ${styles.nextImg}`}/> */}
+            <button onClick={goPrevImg} className={styles.leftButton} style={{left: 100}}><IoIosArrowBack /></button>
+            <div className={styles.imgContainer} >
+                    <a href={images[prevIndex].url}><img src={images[prevIndex].image} className={`${styles.sliderImg} ${styles.prevImg}`}/></a>
+                    <a href={images[currentIndex].url}><img src={images[currentIndex].image} className={`${styles.sliderImg} ${styles.mainImg}`}/></a>
+                    <a href={images[nextIndex].url}><img src={images[nextIndex].image} className={`${styles.sliderImg} ${styles.nextImg}`}/></a>
             </div>
-            <button onClick={goPrevImg} style={{left: 0}}><IoIosArrowBack /></button>
-            <button onClick={goNextImg} style={{right: 0}}><IoIosArrowForward /></button>
+            <button onClick={goNextImg} style={{right: 20}}><IoIosArrowForward /></button>
             <div className={styles.dotContainer}>
                 {images.map((_, index) => (
                 <div
@@ -79,28 +53,8 @@ export function Slider({images}: SliderProps) {
                     onClick={() => setCurrentIndex(index)}/>
                 ))}
             </div>
-                
-        </div>
+            </div>
 
     
     )
 };
-
-
-
-
-// const carousel = document.querySelector(".carousel");
-
-// let isDragging = false;
-
-// const dragStart = () => {
-//     isDragging = true;
-// }
-
-// const dragging = (e) => {
-//     if(!isDragging) return;
-// carousel.scrollLeft = e.pageX;
-// }
-
-// carousel.addEventListener("mousedown", dragStart);
-// carousel.addEventListener("mousemove", dragging);

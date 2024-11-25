@@ -44,6 +44,11 @@
 
 }
 
+.titleStylePC a {
+    text-decoration: none;
+    color: white;
+}
+
 
 .dropdownStylePC {
     display: flex;
@@ -68,41 +73,10 @@
 
 /* ------------MOBILE--------------- */
 
-/* .burger {
-    position: relative;
-    display: block;
-    width: 35px;
-    cursor: pointer;
-    background-color: #E91926;
-
-}
-
-
-.burger .burgerBar .burger:after, .burger:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    transition: 0.4s;
-    border: 1px solid darkgrey;
-    border-style: outset none none outset;
-}
-
-.burger.isOpen:before{
-    transform: rotate(-45deg) translate(-8px, 6px);
-}
-
-.burger.isOpen:after{
-    transform: rotate(-45deg) translate(-8px, 9px);
-}
-
-.burger.isOpen .burgerBar {
-    opacity: 0;
-} */
-
 .burgerImg {
     position: fixed;
+    width: 22px;
+    height: auto;
     top: 20px;
     padding: 2px;
     cursor: pointer;
@@ -131,6 +105,11 @@
     position: relative;
     font-weight: bolder;
     }
+
+.titleStyleMobile a {
+    text-decoration: none;
+    color: white;
+}
 
 .plusIcon {
     size: 9px;
@@ -239,5 +218,13 @@
         cursor: pointer;
         border: 1px solid darkgrey;
         border-style: outset none none outset;
+    }
+
+    .beako {
+        width: 65px;
+        height: auto;
+        position: fixed;
+        bottom: 5px;
+        margin-left: 6px;
     }
 }
