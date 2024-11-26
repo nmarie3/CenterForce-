@@ -1,0 +1,23 @@
+.newsContainer {
+    background-color: white;
+}
+
+.newsContainer .newsInner {
+    display: flex;
+    margin: 30px;
+}
+
+.newsContainer .newsInner img {
+    width: 10em;
+    height: 100%;
+}
+
+.newsList {
+
+}
+
+.readMore {
+
+    font-size: 1em;
+    color: #e50012;
+}
