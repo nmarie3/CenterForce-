@@ -11,18 +11,20 @@ import shop from "../assests/online-shop.png"
 
 
 export function Header() {
+
+    
   return (
     <div className={styles.headerContainer}>
-        <a href="https://blackthunder.jp/"><img src={logo} style={{maxWidth:"50"}}/></a>
-        <ul>
-            <a href="https://blackthunder.jp/"><img src={navi2}/></a>
-            <a href="https://blackthunder.jp/"><img src={navi3}/></a>
-            <a href="https://blackthunder.jp/"><img src={navi4}/></a>
-            <a href="https://blackthunder.jp/"><img src={navi5}/></a>
-            <a href="https://blackthunder.jp/"><img src={navi6}/></a>
-            <a href="https://blackthunder.jp/"><img src={navi7}/></a>
+        <ul className={styles.ulContainer}>
+          <a href="https://blackthunder.jp/"><img className={styles.logoImg} src={logo}/></a>
+          <a href="https://blackthunder.jp/"><img src={navi2}/></a>
+          <a href="https://blackthunder.jp/"><img src={navi3}/></a>
+          <a href="https://blackthunder.jp/"><img src={navi4}/></a>
+          <a href="https://blackthunder.jp/"><img src={navi5}/></a>
+          <a href="https://blackthunder.jp/"><img src={navi6}/></a>
+          <a href="https://blackthunder.jp/"><img src={navi7}/></a>
         </ul>
-        <a href="https://blackthunder.jp/"><img src={shop}/></a>
+        <a href="https://blackthunder.jp/"><img className={styles.shopImg} src={shop}/></a>
     </div>
   )
 }

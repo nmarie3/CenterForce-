@@ -4,22 +4,32 @@
 
 
 .headerContainer {
+    position: fixed;
     display: flex;
     background: rgb(255,255,255);
     background: linear-gradient(115deg, rgba(255,255,255,1) 30%, rgba(229,0,18,1) 30%);
     width: 100%;
     height: 75px;
+    z-index: 9999;
+}
+
+.headerContainer .logoImg {
+    margin-left: 10px;
 }
 
 .headerContainer ul {
     display: flex;
-    max-width: 70%;
-    height: 30%;
+    width: 80%;
+    padding: 0;
 }
 
-.headerContainer img {
+.headerContainer ul img {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-    height:100%;
+}
+
+.headerContainer .shopImg {
+    height: 75px;
+    width: 100%;
 }

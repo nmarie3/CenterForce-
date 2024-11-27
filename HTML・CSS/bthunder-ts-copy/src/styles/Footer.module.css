@@ -5,8 +5,38 @@
 
 .footerContainer {
     display: flex;
+    flex-direction: column;
     background: rgb(248,179,0);
     background: linear-gradient(110deg, rgba(248,179,0,1) 35%, rgba(229,0,18,1) 35%);
     width: 100%;
     height: 113px;
+    color: white;
+    font-size: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footerContainer .SNS {
+    display: flex;
+}
+
+.footerContainer .SNS img {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainer .footerNavi {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.5em;
+}
+
+.footerContainer .footerNavi a {
+    color: white;
+}
+
+.footerContainer .footerNavi img {
+    width: 18%;
 }
