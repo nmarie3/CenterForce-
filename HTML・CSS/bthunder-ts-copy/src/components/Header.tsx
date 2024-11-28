@@ -15,8 +15,8 @@ export function Header() {
     
   return (
     <div className={styles.headerContainer}>
+      <a className={styles.logoImg} href="https://blackthunder.jp/"><img src={logo}/></a>
         <ul className={styles.ulContainer}>
-          <a href="https://blackthunder.jp/"><img className={styles.logoImg} src={logo}/></a>
           <a href="https://blackthunder.jp/"><img src={navi2}/></a>
           <a href="https://blackthunder.jp/"><img src={navi3}/></a>
           <a href="https://blackthunder.jp/"><img src={navi4}/></a>
@@ -24,7 +24,7 @@ export function Header() {
           <a href="https://blackthunder.jp/"><img src={navi6}/></a>
           <a href="https://blackthunder.jp/"><img src={navi7}/></a>
         </ul>
-        <a href="https://blackthunder.jp/"><img className={styles.shopImg} src={shop}/></a>
+        <a className={styles.shopImg} href="https://blackthunder.jp/"><img src={shop}/></a>
     </div>
   )
 }

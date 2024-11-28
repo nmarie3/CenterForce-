@@ -19,24 +19,38 @@
 
 .footerContainer .SNS {
     display: flex;
+    padding: 10px;
+}
+
+.footerContainer .SNS a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -20px;
 }
 
 .footerContainer .SNS img {
     width: 50%;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
 }
+
 
 .footerContainer .footerNavi {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     font-size: 0.5em;
+    padding-bottom: 10px;;
 }
 
 .footerContainer .footerNavi a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
+    width: 30%;
 }
 
 .footerContainer .footerNavi img {
-    width: 18%;
+    width: 50%;
 }

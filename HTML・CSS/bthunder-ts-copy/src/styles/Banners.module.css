@@ -53,19 +53,21 @@
 
 .pickupContainer {
     background-color: black;
-    height: 300px;
+    height: 220px;
+    overflow: hidden;
 }
 
 .pickupImgContainer {
+    position: relative;
+    left: 25%;
+    top: 30%;
     width: 50%;
-    height: 50%;
-    transform: skew(20deg);
 }
 
 .pickupContainer img {
-    position: absolute;
     background: red;
     z-index: -1;
+    transform: scale(1.7);
 }
 
 .pickupContainer a {
@@ -74,19 +76,30 @@
 
 
 .pickupTxt {
-
+    display: flex;
+    flex-direction: column;
+    margin-left: 60%;
+    width: 30%;
+    position: relative;
+    top: -270px;
 }
 
 .pickupTitle {
     background-color: #D70000;
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: white;
+    font-weight: bold;
 }
 
 .pickupSum {
     background-color: #F8B300;
     color: black;
-    font-size: 0.7em;
+    font-size: 0.5em;
+}
+
+.bottomSum {
+    display: flex;
+    justify-content: space-between;
 }
 
 .pickupDate {
@@ -95,7 +108,8 @@
 }
 
 .pickupRead {
-    color: white;
+    position: relative;
+    color: lightgray;
     font-size: 0.6em;
     font-weight: bold;
 

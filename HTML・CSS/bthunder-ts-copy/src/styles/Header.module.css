@@ -3,33 +3,49 @@
 }
 
 
+
 .headerContainer {
     position: fixed;
     display: flex;
     background: rgb(255,255,255);
-    background: linear-gradient(115deg, rgba(255,255,255,1) 30%, rgba(229,0,18,1) 30%);
+    background: linear-gradient(115deg, rgba(255,255,255,1) 28%, rgba(229,0,18,1) 28%);
     width: 100%;
     height: 75px;
     z-index: 9999;
 }
 
+
+
+.headerContainer img {
+    width:100%;
+
+}
+
 .headerContainer .logoImg {
-    margin-left: 10px;
+    width: 45%;
+    padding: 20px;
+    
 }
 
 .headerContainer ul {
     display: flex;
-    width: 80%;
+    width: 100%;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
 }
 
+
 .headerContainer ul img {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    width: 70%;
+    
 }
 
 .headerContainer .shopImg {
+    width: 30%;
+}
+
+.headerContainer .shopImg img {
     height: 75px;
-    width: 100%;
 }

@@ -38,8 +38,10 @@ export function Banners() {
             <p className={styles.pickupTitle}>『ブラックサンダー優雅な余韻ジャンドゥーヤ』裏話!!</p>
             <p className={styles.pickupSum}>【もくじ】0.序章1.ジャンドゥーヤを選んだ理由2.突然の妄想劇場から見えた、プレミアムな味わいへの道すじ3.「優雅な余韻」に込めた思い0.序章
                   ブラックサンダーの「おいしさ」を発展させた「想像を超えるおいしさ」を具現化して、み</p>
-            <p className={styles.pickupDate}>2021.04.09</p>
-            <p className={styles.pickupRead}>もっと見る！！</p>
+            <div className={styles.bottomSum}>
+              <p className={styles.pickupDate}>2021.04.09</p>
+              <p className={styles.pickupRead}>もっと見る！！</p>
+            </div>
             <div className={styles.bolt}></div>
           </div></a>
         </div>

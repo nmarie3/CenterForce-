@@ -15,7 +15,7 @@ export function Footer() {
             <a href="https://x.com/Black_Thunder_"><img src={X}/></a>
           </div>
           <div className={styles.footerNavi}>
-          <a href="https://yurakuseika.co.jp/"><img src={Yuraku}/></a>
+            <a href="https://yurakuseika.co.jp/"><img src={Yuraku} /></a>
             <a href="https://www.yurakuseika.co.jp/company/about.html">会社概要</a>
             <a href="https://www.yurakuseika.co.jp/privacy/">プライバシーポリシー</a>
             <a href="https://www.yurakuseika.co.jp/security/">情報セキュリティーポリシー</a>
