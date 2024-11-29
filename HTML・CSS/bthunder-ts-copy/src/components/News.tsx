@@ -30,12 +30,23 @@ export function News() {
     
     return (
       <div className={styles.newsContainer}>
+        <div className={styles.bolt}/>
           <div className={styles.newsInner}>
             <img src={newsIcon}/>
             <div className={styles.newsList}>
-
+                {articles.map((article, index) => (
+                    <div key={index} className={styles.newsItem}>
+                        <div className={styles.dateTag}>
+                            <div className={styles.articleDate}>{article.date}</div>
+                            <div className={styles.articleTag}>{article.tag}</div>
+                        </div>
+                        <a href={article.url}>
+                        <div className={styles.articleTitle}>{article.title}</div>
+                        </a>
+                    </div>
+                ))}
+            <a href="https://blackthunder.jp/news/" className={styles.readMore}>もっとみる!! ＞</a>
             </div>
-            <button className={styles.readMore}>もっとみる!! ＞</button>
           </div>
       </div>
     )

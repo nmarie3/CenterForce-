@@ -1,0 +1,64 @@
+.pickupContainer {
+    background-color: black;
+    height: 185px;
+    overflow: hidden;
+}
+
+.pickupImgContainer {
+    position: relative;
+    top: -95px;
+}
+
+.pickupContainer img {
+    background: red;
+    z-index: -1;
+    clip-path: polygon(17% 15%, 87% 0%, 87% 53%, 17% 63%);
+    transform: scale(0.7)
+    
+}
+
+.pickupContainer a {
+    text-decoration: none;
+}
+
+
+.pickupTxt {
+    margin-left: 60%;
+    width: 35%;
+    z-index: 999;
+    position: relative;
+    top: -490px;
+    left: -20px;
+}
+
+.pickupTitle {
+    display: inline;
+    background-color: #D70000;
+    font-size: 0.7em;
+    color: white;
+    font-weight: bold;
+}
+
+.pickupSum {
+    background-color: #F8B300;
+    color: black;
+    font-size: 0.5em;
+}
+
+.bottomSum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pickupDate {
+    color: gray;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.pickupRead {
+    position: relative;
+    color: lightgray;
+    font-size: 0.6em;
+    font-weight: bold;
+}
