@@ -10,6 +10,7 @@ import Grid5 from "../assests/kv-item-08-op.png";
 import Grid6 from "../assests/top-bnr01.gif";
 import Grid7 from "../assests/top-bnr02.gif";
 import Grid8 from "../assests/top-bnr03.gif";
+import { ItemCarousel } from './ItemCarousel';
 
 export function Banners() {
   return (
@@ -17,7 +18,7 @@ export function Banners() {
         <div className={styles.gridContainer1}>
             <div className={styles.topItem1}><a href="https://www.yurakuseika.co.jp/lineup/product_83.html"><img src={Top1}/></a></div>
             <div className={styles.topItem2}><a href="https://caseplay.shop/collections/yurakuseika?utm_source=referral&utm_medium=hp&utm_campaign=yurakuseika"><img src={Top2}/></a></div>
-            <div className={styles.topItem3}>T3</div>
+            <div className={styles.topItem3}><ItemCarousel/></div>
         </div>
         <div className={styles.gridContainer2}>
             <div className={styles.gridItem1}><img src={Grid1}/></div>

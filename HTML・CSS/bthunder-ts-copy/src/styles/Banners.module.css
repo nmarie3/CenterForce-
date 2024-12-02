@@ -6,7 +6,6 @@
 .bannersContainer {
     padding-top: 75px;
     background: rgb(255,255,255);
-    background: linear-gradient(115deg, rgba(255,255,255,1) 30%, rgba(229,0,18,1) 30%);
     width: 100%;    
 }
 
@@ -29,6 +28,12 @@
 
 .topItem3 {
     grid-column: 2/-1;
+    overflow: hidden;
+    background-color: white;
+    background: 
+    repeating-conic-gradient(#FBEED3 0% 25%, transparent 0% 50%) 
+      50% / 10px 10px;
+
 }
 
 .bannersContainer .gridContainer2 {

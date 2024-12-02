@@ -1,9 +1,9 @@
 .newsContainer {
     background-color: white;
-    margin-left: 20px;
-    margin-right: 20px;
     height: 300px;
     overflow: none;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .bolt {
@@ -15,7 +15,7 @@
     z-index: 2;
     overflow: none;
 
-    clip-path: polygon(57% 0, 43% 34%, 71% 26%, 36% 100%, 0 100%, 28% 50%, 16% 51%);
+    clip-path: polygon(33% 0, 49% 0, 38% 18%, 64% 8%, 39% 100%, 0 100%, 25% 36%, 8% 38%);
 }
 
 
@@ -24,25 +24,28 @@
 .newsContainer .newsInner {
     position: relative;
     display: flex;
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
     z-index: 999;
     top: -300px;
+    margin-right: 50px;
 }
 
 .newsContainer .newsInner img {
     width: 13em;
     height: 100%;
+    margin-left: 50px;
     
 }
 
 .newsList {
     display: flex;
     flex-direction: column;
-    width: 60%; 
+    margin-right: 50px;
 }
 
 .newsList a {
@@ -51,6 +54,7 @@
 
 .readMore {
     text-align: none;
+    font-size: 0.7em;
     color: #e50012;
     text-align: right;
     font-weight: bold;

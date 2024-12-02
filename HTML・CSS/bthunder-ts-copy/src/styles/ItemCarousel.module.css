@@ -2,4 +2,61 @@
     box-sizing: border-box;
 }
 
+.carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.itemLogo{
+    width: 230px;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+
+}
+
+.item {
+    min-width: 200px;
+    height: 100%;
+    padding: 5px;
+}
+
+.item a {
+    padding: 0;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
+
+.leftArrow {
+    position:absolute;
+    left: 0;
+    font-size: 2em;
+    font-weight: bold;
+    all: unset;
+    color: #CBAF82;
+    z-index: 999;
+}
+
+.rightArrow {
+    position:absolute;
+    font-size: 2em;
+    font-weight: bold;
+    all: unset;
+    color: #CBAF82;
+    z-index: 999;
+}
 
