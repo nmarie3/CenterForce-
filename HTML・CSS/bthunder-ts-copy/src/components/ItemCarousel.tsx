@@ -19,10 +19,9 @@ import Choco17 from "../assests/white.png";
 import Choco18 from "../assests/okinawa.png";
 import Choco19 from "../assests/hokkaido.png";
 import Choco20 from "../assests/macha.png";
-import {motion} from "motion/react";
 import ItemLogo from "../assests/item-title.png";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { useRef, useEffect, useState } from "react";
 
 
@@ -60,39 +59,36 @@ const items: imgItems[] = [
 
 
 export function ItemCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [imgIndex, setImgIndex] = useState(0)
 
 
-  // const prevIndex = (currentIndex - 1 + images.length) % images.length;
-  // const nextIndex = (currentIndex + 1) % images.length;
+  const showNextImg = () => {
+    setImgIndex(index => {
+      if (index === items.length - 1) return 0
+      return index + 1
+      })
+  }
 
-
-  // const goPrevImg = () => {
-  //     setCurrentIndex(prevIndex);
-  // };
-  
-  // const goNextImg = () => {
-  //     setCurrentIndex(nextIndex);
-  // };    
-
-
+  const showPrevImg = () => {
+    setImgIndex(index => {
+    if (index === 0) return items.length - 1
+    return index - 1
+    })
+  }
 
 
 
     return (
-      <motion.div className={styles.carouselContainer}>
+      <div className={styles.carouselContainer}>
+        <button onClick={showPrevImg} className={styles.leftArrow}><IoIosArrowBack /></button>
+        <button onClick={showNextImg} className={styles.rightArrow}><IoIosArrowForward /></button>
         <div className={styles.itemLogo}><img src={ItemLogo}/></div>
-        <button className={styles.leftArrow}>＜</button>
-        <button className={styles.rightArrow}>＞</button>
-        <motion.div drag="x" className={styles.carousel}>
-          {items.map(img => {
-            return (
-              <motion.div className={styles.item}>
-                <a href={img.url}><img src={img.image}/></a>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </motion.div>
+        <div className={styles.carousel}>
+            <a href={items[imgIndex].url}><img src={items[imgIndex].image}/></a>
+          </div>
+          
+
+          
+        </div>
     )
   };

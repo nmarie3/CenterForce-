@@ -3,10 +3,10 @@
 }
 
 .carouselContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
     text-align: center;
 }
 
@@ -19,44 +19,88 @@
 
 
 .carousel {
-    display: flex;
     align-items: center;
-
+    margin-bottom: 30px;
+    display: flex;
+    flex-shrink: 0;
+    width: auto;
 }
 
-.item {
-    min-width: 200px;
-    height: 100%;
-    padding: 5px;
+
+
+.carousel img {
+    max-width: 180px;
+    height: 90px;
 }
 
-.item a {
+.carousel a {
     padding: 0;
+
 }
 
-.item img {
-    width: 100%;
-    height: 100%;
-    margin-top: -50px;
-    margin-bottom: -50px;
+button {
+    display: flex;
+    all: unset;
+    position: absolute;
+    color: #CBAF82;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: block;
+    padding-top: 20px;
+    z-index: 99;
 }
 
 .leftArrow {
-    position:absolute;
-    left: 0;
-    font-size: 2em;
-    font-weight: bold;
-    all: unset;
-    color: #CBAF82;
-    z-index: 999;
+    left: 0px;
+    top: 30%;
+    font-size: 3.7em;
 }
 
 .rightArrow {
-    position:absolute;
-    font-size: 2em;
-    font-weight: bold;
-    all: unset;
-    color: #CBAF82;
-    z-index: 999;
+    right: 0;
+    top: 30%;
+    font-size: 3.7em;
 }
 
+
+
+@media (max-width: 700px) {
+
+    .itemLogo{
+        width: 150px;
+        align-items: center;
+        padding: 2px;
+        
+    }
+    
+    
+    .carousel {
+        align-items: center;
+        margin-bottom: 15px;
+        margin-top:10px;
+        display: flex;
+        flex-shrink: 0;
+        width: auto;
+    }
+    
+    
+    
+    .carousel img {
+        max-width: 130px;
+        max-height: 80px;
+    }
+
+
+    .leftArrow {
+        left: 0px;
+        top: 10%;
+        font-size: 3em;
+    }
+    
+    .rightArrow {
+        right: 0;
+        top: 10%;
+        font-size: 3em;
+    }
+
+}

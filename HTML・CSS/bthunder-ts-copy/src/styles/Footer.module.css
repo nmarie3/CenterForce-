@@ -54,3 +54,63 @@
 .footerContainer .footerNavi img {
     width: 50%;
 }
+
+
+/*-------------MOBILE---------------*/
+
+@media (max-width: 700px) {
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        background: rgb(248,179,0);
+        background: linear-gradient(110deg, rgba(248,179,0,1) 35%, rgba(229,0,18,1) 35%);
+        width: 100%;
+        height: 113px;
+        color: white;
+        font-size: 0.5em;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .footerContainer .SNS {
+        display: flex;
+        padding: 10px;
+    }
+    
+    .footerContainer .SNS a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -30px;
+    }
+    
+    .footerContainer .SNS img {
+        width: 40%;
+        padding: 0;
+    }
+    
+    
+    .footerContainer .footerNavi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5em;
+        padding-bottom: 10px;
+    }
+    
+    .footerContainer .footerNavi a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 50%;
+        padding:1px;
+    }
+    
+    .footerContainer .footerNavi img {
+        width: 40%;
+    }
+
+}

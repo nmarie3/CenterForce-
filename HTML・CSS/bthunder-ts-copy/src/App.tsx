@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {Header} from "./components/Header";
 import {Banners} from "./components/Banners";
+import {BannersMobile} from "./components/BannersMobile";
 import {Pickup} from "./components/Pickup";
 import {News} from "./components/News";
 import {Footer} from "./components/Footer";
@@ -22,7 +23,8 @@ function App() {
     <>
     {/* {showSplash && <Splash onClose={closeSplash} />} */}
       <Header/>
-      <Banners/>
+      {/* <Banners/> */}
+      <BannersMobile/>
       <Pickup/>
       <News/>
       <Footer/>

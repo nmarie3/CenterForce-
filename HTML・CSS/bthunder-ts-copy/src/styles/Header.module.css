@@ -49,3 +49,12 @@
 .headerContainer .shopImg img {
     height: 75px;
 }
+
+/*-------------MOBILE---------------*/
+
+@media (max-width: 700px) {
+    .headerContainer {
+        display: none;
+    }
+
+}

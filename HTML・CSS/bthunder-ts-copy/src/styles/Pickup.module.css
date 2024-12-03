@@ -10,7 +10,6 @@
 }
 
 .pickupContainer img {
-    background: red;
     z-index: -1;
     clip-path: polygon(17% 15%, 87% 0%, 87% 53%, 17% 63%);
     transform: scale(0.7)
@@ -61,4 +60,65 @@
     color: lightgray;
     font-size: 0.6em;
     font-weight: bold;
+}
+
+
+@media (max-width: 700px) {
+    .pickupContainer {
+        height: 500px;
+    }
+
+    .pickupImgContainer {
+        position: relative;
+        top: 0;
+    }
+    
+    .pickupContainer img {
+        display: block;
+        width: 100%;
+        z-index: none;
+        clip-path: polygon(0 17%, 100% 0, 100% 80%, 0 94%);
+        transform: none;
+        top: -10px;
+    }
+
+    .pickupTxt {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        margin-left: 10px;
+        margin-right:10px
+    }
+
+    .pickupTitle {
+        display: inline;
+        background-color: #D70000;
+        font-size: 0.7em;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .pickupSum {
+        background-color: #F8B300;
+        color: black;
+        font-size: 0.5em;
+    }
+    
+    .bottomSum {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .pickupDate {
+        color: gray;
+        font-size: 0.6em;
+        font-weight: bold;
+    }
+    
+    .pickupRead {
+        position: relative;
+        color: lightgray;
+        font-size: 0.6em;
+        font-weight: bold;
+    }
 }
