@@ -30,6 +30,7 @@ export function News() {
     
     return (
       <div className={styles.newsContainer}>
+        <div className={styles.dotEffectMobile}></div>
         <div className={styles.bolt}/>
           <div className={styles.newsInner}>
             <img src={newsIcon}/>
@@ -45,7 +46,7 @@ export function News() {
                         </a>
                     </div>
                 ))}
-            <a href="https://blackthunder.jp/news/" className={styles.readMore}>もっとみる!! ＞</a>
+            <div className={styles.readMoreMobile}><a href="https://blackthunder.jp/news/" className={styles.readMore}>もっとみる!! ＞</a></div>
             </div>
           </div>
       </div>

@@ -16,7 +16,7 @@ export function Pickup() {
                 ブラックサンダーの「おいしさ」を発展させた「想像を超えるおいしさ」を具現化して、み</p>
           <div className={styles.bottomSum}>
             <p className={styles.pickupDate}>2021.04.09</p>
-            <p className={styles.pickupRead}>もっと見る！！</p>
+            <div className={styles.pickupReadMobile}><p className={styles.pickupRead}>もっと見る！！</p></div>
           </div>
           <div className={styles.bolt}></div>
         </div></a>

@@ -1,6 +1,7 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import styles from "../styles/Banners.module.css"
 import Top1 from "../assests/kv-item-01-1.jpg";
+import Top1Mobile from "../assests/kv-item-01-1-sp.jpg";
 import Top2 from "../assests/kv-item04.jpg";
 import Grid1 from "../assests/kv-item-06.gif";
 import Grid2 from "../assests/kv-item-05.png";
@@ -13,10 +14,26 @@ import Grid8 from "../assests/top-bnr03.gif";
 import { ItemCarousel } from './ItemCarousel';
 
 export function Banners() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <=700);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 700);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+
+
   return (
     <div className={styles.bannersContainer}>
         <div className={styles.gridContainer1}>
-            <div className={styles.topItem1}><a href="https://www.yurakuseika.co.jp/lineup/product_83.html"><img src={Top1}/></a></div>
+            <div className={styles.topItem1}><a href="https://www.yurakuseika.co.jp/lineup/product_83.html"><img src={isMobile ? Top1Mobile : Top1}/></a></div>
             <div className={styles.topItem2}><a href="https://caseplay.shop/collections/yurakuseika?utm_source=referral&utm_medium=hp&utm_campaign=yurakuseika"><img src={Top2}/></a></div>
             <div className={styles.topItem3}><ItemCarousel/></div>
         </div>

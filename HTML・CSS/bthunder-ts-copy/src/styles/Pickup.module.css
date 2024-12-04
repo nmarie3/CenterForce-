@@ -86,8 +86,8 @@
         display: flex;
         flex-direction: column;
         top: 0;
-        margin-left: 10px;
-        margin-right:10px
+        margin-left: 45px;
+        width: 80%;
     }
 
     .pickupTitle {
@@ -106,7 +106,7 @@
     
     .bottomSum {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
     }
     
     .pickupDate {
@@ -117,8 +117,20 @@
     
     .pickupRead {
         position: relative;
-        color: lightgray;
+        color: #e50012;
         font-size: 0.6em;
         font-weight: bold;
+    }
+
+
+    .pickupReadMobile {
+        background-color: white;
+        border: solid 1px #e50012;
+        text-align: center;
+        width: 100%;
+
+        &:hover {
+            background-color: #e50012;
+        }
     }
 }
