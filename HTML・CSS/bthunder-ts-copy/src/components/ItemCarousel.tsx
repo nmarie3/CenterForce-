@@ -59,7 +59,9 @@ const items: imgItems[] = [
 
 
 export function ItemCarousel() {
-  const [imgIndex, setImgIndex] = useState(0)
+  const [imgIndex, setImgIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
 
   const showNextImg = () => {
@@ -76,6 +78,27 @@ export function ItemCarousel() {
     })
   }
 
+  const handleTouchStart = (e: React.TouchEvent)=> {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 150) {
+      // moveSliderRight();
+    }
+
+    if (touchStart - touchEnd > -150) {
+      // moveSliderLeft();
+    }
+
+  }
+
+
+
 
 
     return (
@@ -83,7 +106,7 @@ export function ItemCarousel() {
         <button onClick={showPrevImg} className={styles.leftArrow}><IoIosArrowBack /></button>
         <button onClick={showNextImg} className={styles.rightArrow}><IoIosArrowForward /></button>
         <div className={styles.itemLogo}><img src={ItemLogo}/></div>
-        <div className={styles.carousel}>
+        <div className={styles.carousel} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
             <a href={items[imgIndex].url}><img src={items[imgIndex].image}/></a>
           </div>
           

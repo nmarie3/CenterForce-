@@ -1,0 +1,39 @@
+.headerContainerMobile {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.burgerImg {
+    position: fixed;
+    width: 50px;
+    height: 42.5px;
+    top: 0px;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    cursor: pointer;
+    background-color: #D5000E;
+    z-index: 999999;
+}
+
+.headerContainerMobile .logoImg img {
+    width: 150px;
+    padding: 5px;
+    top: 0;
+    left: 0;
+}
+
+.ulContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.ulContainer img {
+    width: 60px;
+}

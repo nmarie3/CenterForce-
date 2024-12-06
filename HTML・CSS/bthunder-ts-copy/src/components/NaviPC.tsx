@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "../styles/Header.module.css";
 import logo from "../assests/logo.png";
 import navi2 from "../assests/menu-02.png";
