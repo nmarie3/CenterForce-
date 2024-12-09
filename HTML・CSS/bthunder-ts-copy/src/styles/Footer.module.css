@@ -20,6 +20,7 @@
 .footerContainer .SNS {
     display: flex;
     padding: 10px;
+    margin-left: -10%;
 }
 
 .footerContainer .SNS a {
@@ -65,29 +66,29 @@
         background: rgb(248,179,0);
         background: linear-gradient(110deg, rgba(248,179,0,1) 35%, rgba(229,0,18,1) 35%);
         width: 100%;
-        height: 113px;
+        height: 100%;
         color: white;
         font-size: 0.5em;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
+        padding-top: 30px;
     }
     
     
     .footerContainer .SNS {
         display: flex;
-        padding: 10px;
+        margin-left: -25;
     }
     
     .footerContainer .SNS a {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: -30px;
+        width: 100%;
+        padding-top: 5px;
     }
     
     .footerContainer .SNS img {
-        width: 40%;
         padding: 0;
     }
     
@@ -106,12 +107,13 @@
         justify-content: center;
         align-items: center;
         color: white;
-        width: 50%;
-        padding:1px;
+        width: 100%;
+        padding:3px;
+        font-size: 0.5rem;
     }
     
     .footerContainer .footerNavi img {
-        width: 40%;
+        width: 20%;
     }
 
 }

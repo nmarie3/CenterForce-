@@ -44,9 +44,11 @@ export function Banners() {
             <div className={styles.gridItem4}><a href="https://blackthunder.jp/history/"><img src={Grid4}/></a></div>
             <div className={styles.gridItem5}><a href="https://blackthunder.jp/factory/"><img src={Grid5}/></a></div>
             <div className={styles.gridItem6}><img src={Grid6}/></div>
+          </div>
+          <div className={styles.gridContainer3}>
             <div className={styles.gridItem7}><img src={Grid7}/></div>
             <div className={styles.gridItem8}><img src={Grid8}/></div>
-        </div>
+          </div>
     </div>
   )
 }

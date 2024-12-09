@@ -78,21 +78,32 @@ export function ItemCarousel() {
     })
   }
 
+  useEffect(() => {
+    const timer = setInterval(showNextImg, 2000);
+
+    return () => clearInterval(timer);
+  }, [imgIndex, items.length]);
+
+
   const handleTouchStart = (e: React.TouchEvent)=> {
     setTouchStart(e.targetTouches[0].clientX);
+    console.log('touch start')
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX);
+    console.log('touch move')
   };
 
   const handleTouchEnd = () => {
     if (touchStart - touchEnd > 150) {
-      // moveSliderRight();
+      console.log('swipe left')
+      showNextImg();
     }
 
     if (touchStart - touchEnd > -150) {
-      // moveSliderLeft();
+      console.log('swipe right')
+      showPrevImg();
     }
 
   }

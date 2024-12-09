@@ -11,7 +11,7 @@
 }
 
 .itemLogo{
-    width: 230px;
+    width: 200px;
     align-items: center;
     padding: 20px;
     
@@ -29,7 +29,7 @@
 
 
 .carousel img {
-    max-width: 180px;
+    max-width: 120px;
     height: 90px;
 }
 
@@ -51,12 +51,14 @@ button {
 }
 
 .leftArrow {
+    position: absolute;
     left: 0px;
     top: 30%;
     font-size: 3.7em;
 }
 
 .rightArrow {
+    position: absolute;
     right: 0;
     top: 30%;
     font-size: 3.7em;
@@ -81,6 +83,7 @@ button {
         display: flex;
         flex-shrink: 0;
         width: auto;
+        pointer-events: all;
     }
     
     

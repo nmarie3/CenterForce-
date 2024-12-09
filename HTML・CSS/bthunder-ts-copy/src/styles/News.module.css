@@ -57,11 +57,14 @@
 }
 
 .readMore {
+    display: flex;
     text-align: none;
     font-size: 0.7em;
     color: #e50012;
     text-align: right;
     font-weight: bold;
+    justify-content: flex-end;
+    
 
     &:hover {
         text-decoration: underline;
@@ -98,7 +101,7 @@
     color: white;
     background-color: black;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 .dateTag {
@@ -115,22 +118,36 @@
         position: relative;
         top: 30px;
         height: 420px;
+        width: 100%;
         overflow: none;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: -30px;
         z-index: 1;
-        margin-bottom: 30px;
     }
     
+    .backgroundPattern {
+        width: 100%;
+        height: 100%;;
+        background-image:
+        linear-gradient(45deg, #ccc 25%, transparent 25%), 
+        linear-gradient(135deg, #ccc 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ccc 75%),
+        linear-gradient(135deg, transparent 75%, #ccc 75%);
+        background-size:2px 2px;
+        background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px;
+        clip-path: polygon(100% 0, 100% 91%, 0 100%, 0 11%);
+        z-index: 3;
+    }
+
     .bolt {
         position: absolute;
         content: '';
         background-color: #FDEED1;
         width: 300px;
         height: 420px;
-        z-index: 2;
-        left: -40px;
+        z-index: -2;
+        left: -80px;
         overflow: none;
         clip-path: polygon(10% 43%, 65% 0, 74% 0, 49% 31%, 78% 20%, 32% 100%, 0 100%, 0 76%, 29% 44%);
     }
@@ -139,8 +156,11 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        width: 90%;
         margin-top: 0px;
         margin-bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
         justify-content: center;
         align-items: center;
         gap: 20px;
@@ -149,7 +169,7 @@
     }
     
     .newsContainer .newsInner img {
-        width: 70%;
+        width: 80%;
         height: 100%;
         margin-left: 0;
         
@@ -159,18 +179,28 @@
         display: flex;
         flex-direction: column;
         margin-right: 0;
-        height: 300px;
     }
     
     .newsList a {
         text-decoration:none;
+        line-height: 1;
     }
     
+    .articleTitle {
+        display: inline;
+        color: white;
+        background-color: black;
+        font-weight: bold;
+    }
+
     .readMore {
+        display: flex;
         font-size: 0.5em;
         color: #e50012;
         text-align: right;
         font-weight: bold;
+        justify-content: center;
+        padding: 5px;
 
     
         &:hover {
@@ -231,15 +261,6 @@
     .dateTag {
         display: flex;
         flex-direction: row;
-    }
-
-    .dotEffectMobile {
-        content: '';
-        background-color: white;
-        background: 
-        repeating-conic-gradient(black 0% 25%, transparent 0% 50%) 
-      50% / 10px 10px;
-      z-index: 3;
     }
 
 }

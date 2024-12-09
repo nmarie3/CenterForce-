@@ -22,7 +22,7 @@ import shop from "../assests/menu-08.png"
           className={styles.burgerImg}
           size="25px"
           color="white"
-          style={{ marginLeft: "10px" }}
+          style={{ marginLeft: "10px", zIndex: "900"}}
           onClick={() => setIsOpen(!isOpen)}
         />
       );
@@ -32,26 +32,24 @@ import shop from "../assests/menu-08.png"
           className={styles.burgerImg}
           size="25px"
           color="white"
-          style={{marginLeft: "10px"}}
+          style={{marginLeft: "10px", zIndex: "900"}}
           onClick={() => setIsOpen(!isOpen)}
         />
     
       );
 
     return (
-        <div className={styles.headerContainerMobile}>
+        <div className={styles.headerContainerMobile} style={isOpen ? {backgroundColor: "rgba(0, 0, 0, 0.9)", height: "100vh", position: "fixed", zIndex: 1000} : {}}>
           {isOpen ? closeIcon : burgerIcon}
           <a className={styles.logoImg} href="https://blackthunder.jp/"><img src={logo}/></a>
           {isOpen && (
             <ul className={styles.ulContainer}>
-              <a href="https://blackthunder.jp/"><img src={navi1}/></a>
               <a href="https://blackthunder.jp/news/"><img src={navi2}/></a>
               <a href="https://blackthunder.jp/about/"><img src={navi3}/></a>
               <a href="https://blackthunder.jp/history/"><img src={navi4}/></a>
               <a href="https://blackthunder.jp/factory/"><img src={navi5}/></a>
               <a href="https://blackthunder.jp/column/"><img src={navi6}/></a>
               <a href="https://blackthunder.jp/news/"><img src={navi7}/></a>
-              <a href="https://blackthunder.jp/"><img src={shop}/></a>
             </ul>)}
         </div>
       )

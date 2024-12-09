@@ -2,36 +2,45 @@
     position: fixed;
     width: 100%;
     background-color: white;
+    z-index: 900;
 }
+
 
 .burgerImg {
     position: fixed;
-    width: 50px;
-    height: 42.5px;
+    width: 40px;
+    height: 36.5px;
     top: 0px;
     right: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding-top: 8px;
     padding-bottom: 11px;
     cursor: pointer;
     background-color: #D5000E;
-    z-index: 999999;
+    z-index: 900;
 }
 
 .headerContainerMobile .logoImg img {
-    width: 150px;
+    width: 120px;
     padding: 5px;
     top: 0;
     left: 0;
 }
 
+.logoImg {
+    z-index: 0;
+}
+
 .ulContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
     align-items: center;
     gap: 5px;
+    padding: 0;
+    z-index: 1001;
+    background-color: none;
 }
 
 .ulContainer img {

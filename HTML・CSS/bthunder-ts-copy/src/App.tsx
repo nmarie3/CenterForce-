@@ -1,35 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {Navi} from "./components/Navi";
 import {Banners} from "./components/Banners";
 import {BannersMobile} from "./components/BannersMobile";
 import {Pickup} from "./components/Pickup";
 import {News} from "./components/News";
 import {Footer} from "./components/Footer";
-import {Splash} from "./components/Splash";
+//import {Splash} from "./components/Splash";
 
 
 
 function App() {
-  // const [showSplash, setShowSplash] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
 
-  // const closeSplash = () => {
-  //   setShowSplash(false);
-  // };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 700);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
 
 
   return (
 
-    <>
-    {/* {showSplash && <Splash onClose={closeSplash} />} */}
-      <Navi/>
-      {/* <Banners/> */}
-      <BannersMobile/>
-      <Pickup/>
-      <News/>
-      <Footer/>
-    </>
-
+    <div style={{ overflow: "hidden" }}>
+      {/* {showSplash && <Splash onClose={closeSplash} />} */}
+      <Navi />
+      {isMobile ? <BannersMobile /> : <Banners />}
+      <Pickup />
+      <News />
+      <Footer />
+    </div>
 
 
   );
