@@ -60,8 +60,10 @@ const items: imgItems[] = [
 
 export function ItemCarousel() {
   const [imgIndex, setImgIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+  const [mouseDown, setMouseDown] = useState(false);
+  const [startX, setStatrtX] = useState(0);
+  const [slideLeftState, setSlideLeftState] = useState<number | null>(null);
+  const [mouseMoved, setMouseMoved] = useState(0);
 
 
   const showNextImg = () => {
@@ -69,14 +71,14 @@ export function ItemCarousel() {
       if (index === items.length - 1) return 0
       return index + 1
       })
-  }
+  };
 
   const showPrevImg = () => {
     setImgIndex(index => {
     if (index === 0) return items.length - 1
     return index - 1
     })
-  }
+  };
 
   useEffect(() => {
     const timer = setInterval(showNextImg, 2000);
@@ -85,28 +87,29 @@ export function ItemCarousel() {
   }, [imgIndex, items.length]);
 
 
-  const handleTouchStart = (e: React.TouchEvent)=> {
-    setTouchStart(e.targetTouches[0].clientX);
-    console.log('touch start')
+  const carouselContainer = useRef<HTMLDivElement>(null);
+
+  const handleMouseDown = (e: React.MouseEvent)=> {
+    if (!carouselContainer.current) return;
+    setMouseDown(true);
+    setStatrtX(e.pageX - carouselContainer.current.offsetLeft);
+    setSlideLeftState(carouselContainer.current.scrollLeft);
+    setMouseMoved(0);
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-    console.log('touch move')
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 150) {
-      console.log('swipe left')
-      showNextImg();
-    }
-
-    if (touchStart - touchEnd > -150) {
-      console.log('swipe right')
-      showPrevImg();
-    }
-
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if(!mouseDown|| !carouselContainer.current) 
+      return;
+  
+    const currentMousePosition = (e.pageX - carouselContainer.current.offsetLeft);
+    setMouseMoved(currentMousePosition - startX);
   }
+  
+  useEffect(() => {
+    if (carouselContainer.current && slideLeftState !== null) {
+      carouselContainer.current.scrollLeft = slideLeftState - mouseMoved;
+    }
+  }, [slideLeftState, mouseMoved]);
 
 
 
@@ -117,7 +120,11 @@ export function ItemCarousel() {
         <button onClick={showPrevImg} className={styles.leftArrow}><IoIosArrowBack /></button>
         <button onClick={showNextImg} className={styles.rightArrow}><IoIosArrowForward /></button>
         <div className={styles.itemLogo}><img src={ItemLogo}/></div>
-        <div className={styles.carousel} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+        <div className={`${styles.carousel} ${mouseDown ? styles.activeClass : ''}`} ref={carouselContainer}
+         onMouseDown={(e) =>handleMouseDown(e)} 
+         onMouseUp={() => setMouseDown(false)} 
+         onMouseLeave={()=> setMouseDown(false)}
+         onMouseMove={(e) => handleMouseMove(e)}>
             <a href={items[imgIndex].url}><img src={items[imgIndex].image}/></a>
           </div>
           

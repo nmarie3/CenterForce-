@@ -24,14 +24,18 @@
     display: flex;
     flex-shrink: 0;
     width: auto;
+    white-space: nowrap;
+    overflow:hidden;
 }
 
 
 
 .carousel img {
-    max-width: 120px;
+    display: inline-flex;
+    max-width: 150px;
     height: 90px;
 }
+
 
 .carousel a {
     padding: 0;
@@ -63,6 +67,11 @@ button {
     top: 30%;
     font-size: 3.7em;
 }
+
+.activeClass {
+    cursor: grabbing;
+}
+
 
 
 
