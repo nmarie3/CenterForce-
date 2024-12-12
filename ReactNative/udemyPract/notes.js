@@ -15,3 +15,8 @@
 //type - string that describes the exact change operation we want to make
 //payload - some data that is critical to the change operation
 //ex. {type: 'change_red', payload; 15} what we want to change and by how much
+
+//TextInput allows user to input text and that component is all that's required
+//flex: 1 >> tells the container to use as much space as it possibly can ex. the entire row
+//better to use align-self for certain objects to avoid making nearby objects shrink in other ways
+//marginHorizontal is a good hack
