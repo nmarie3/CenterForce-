@@ -20,3 +20,18 @@
 //flex: 1 >> tells the container to use as much space as it possibly can ex. the entire row
 //better to use align-self for certain objects to avoid making nearby objects shrink in other ways
 //marginHorizontal is a good hack
+
+//useEffect is good to have functions run once and stop instead of infidently looping ex. search bar
+//hooks add more functionality to a component we create
+
+//keyExtractor = Provides a unique key for each item in the list / React uses these keys to efficiently
+    // update the UI when the list data changes. Without a unique key, React Native might unnecessarily re-render items,
+    // leading to performance issues.
+//renderItem = Specifies how each item in the list should be rendered.
+//FlatList = a high-performance component used to render lists of data. It is optimized for handling large sets of data by only
+    // rendering the visible items (and a few items just outside the viewport) instead of rendering the entire list at once.
+    // This makes it memory-efficient and ideal for mobile applications.
+//adding horizontal to the FlatList will allow for horizontal scrolling
+//ScrollView automatically enables vitical scrolling if it detects the screen doesn't fit everything
+//TouchableOpacity wraps other components so they can respond to touch interactions
+//withNavigation is a special feature that allows you to skip going through parent props to access navigation
