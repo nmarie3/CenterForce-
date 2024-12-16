@@ -1,3 +1,7 @@
+//FlatList element turns an array into a list of elements
+    //this is the same as mapping through a list on regular React, but it's better to use FlatList for R-native
+    //FlatList must take in two props, "data" and "renderItem"
+
 //props - system to pass data from parent to a child
 //state - system to track a piece of data that will change over time. if data changes app will rerender
 
@@ -35,3 +39,5 @@
 //ScrollView automatically enables vitical scrolling if it detects the screen doesn't fit everything
 //TouchableOpacity wraps other components so they can respond to touch interactions
 //withNavigation is a special feature that allows you to skip going through parent props to access navigation
+
+//useContext > look at the context of a different parent component and give us the value of that prop
