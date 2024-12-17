@@ -41,3 +41,12 @@
 //withNavigation is a special feature that allows you to skip going through parent props to access navigation
 
 //useContext > look at the context of a different parent component and give us the value of that prop
+
+//[...blogPosts] << means take all current posts and add them to the new one in the array
+
+//useReducer hook >> use switch statements with action objects
+
+//dispatch an action >> is an object that says how we want to change our current variable
+    //const reducer = (state, action) >> action is the dispatch object
+
+//filter is good to delete something as it finds a matching id then return all that don't match
