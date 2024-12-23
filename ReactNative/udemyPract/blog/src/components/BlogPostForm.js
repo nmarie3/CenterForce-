@@ -17,8 +17,14 @@ const BlogPostForm = ({onSubmit, initialValues}) => {
                 title="Save Blog Post"/>
         </View>
      );   
+};
 
-}
+BlogPostForm.defaultProps = {
+    initialValues: {
+        title: '',
+        content: ''
+    }
+};
 
 const styles = StyleSheet.create({
     input: {

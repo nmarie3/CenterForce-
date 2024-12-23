@@ -50,3 +50,8 @@
     //const reducer = (state, action) >> action is the dispatch object
 
 //filter is good to delete something as it finds a matching id then return all that don't match
+
+//pop (found with navigation) = pops off the current view off of a stack of current views, in other words,
+    //returns the user to the previous screen they were at
+
+//() => is a callback function
