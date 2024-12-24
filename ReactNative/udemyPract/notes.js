@@ -55,3 +55,7 @@
     //returns the user to the previous screen they were at
 
 //() => is a callback function
+
+//didFocus = whenever "this" component becomes the main focus(primary screen on device), do this callback function
+
+//listener is for when we want to clean up after ourselves
